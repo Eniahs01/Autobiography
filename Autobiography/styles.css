@@ -1,0 +1,738 @@
+/* General Reset and Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset Body and Navbar */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ede2ed;
+    color: #333;
+    line-height: 1.9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('image/nav.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    height: 100px; /* Ensure this height matches the actual height of the navbar */
+}
+
+/* Body and Main Content Below Navbar */
+body {
+    padding-top: 70px; /* This value should match the navbar height */
+}
+
+/* Ensuring the sections below navbar are not hidden */
+#home, #about, #travels, #achievements {
+    padding-top: 70px; /* This ensures content below the navbar is properly spaced */
+}
+
+
+.content-left, .content-right {
+    padding-top: 70px; /* Add extra space to the sections if needed */
+}
+
+/* Example for specific section */
+.section {
+    padding-top: 70px; /* Ensures specific sections are pushed down */
+}
+
+/* Rest of your navbar styling */
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #f39c12;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+
+/* Main Content Section */
+.main-content {
+    display: flex; /* Apply flexbox */
+    justify-content: flex-end; /* Align content to the right */
+    align-items: flex-start; /* Aligns the items to the top */
+    padding: 20px; /* Reduced padding to allow better positioning */
+    background-color: #ffffff !important;;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 150px; /* Adjust if needed to avoid overlap with navbar */
+}
+
+
+.content-left {
+    position: relative;
+    height: 600px; /* Set a fixed height for the image container */
+    width: 30%; /* Ensure image container takes up 30% of the width */
+    overflow: hidden;
+    margin-left: 190px; /* Add left margin to create space between image and text */
+    margin-top: -6px; /* Moves the image upwards by 50px */
+}
+
+.content-left img {
+    width: 100%;  /* Makes the image span the full width of the container */
+    height: 100%;  /* Ensures the image takes up the full height */
+    object-fit: cover; /* Ensures the image doesn't get cropped or stretched */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(224, 166, 166, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.content-left img:hover {
+    transform: scale(1.05); /* Smooth zoom effect on hover */
+}
+
+.content-right {
+    padding-left: 80px;
+    width: 45%; /* Ensure content takes up the remaining space */
+    margin-top: 150px; /* Adds space above the text to push it down */
+}
+
+.content-right h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.content-right h1:hover {
+    color: #3498db;
+}
+
+.content-right p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-align: justify; /* This will justify the text */
+}
+
+.cta-buttons a {
+    padding: 12px 24px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.cta-buttons .btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.cta-buttons .btn-primary:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+.cta-buttons .btn-warning {
+    background: linear-gradient(135deg, #75a018, #00d312);
+}
+
+.cta-buttons .btn-warning:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #75a018, #00d312);
+}
+
+/* About Me Section */
+.about {
+    background-image: url('image/aboutbg.jpg');
+    background-size: cover; 
+    padding: 80px 0;
+}
+
+.about h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about h3 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #000000;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Profile Image (Rectangular with rounded corners) */
+.profile-img {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    margin-left: 50px;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 767.98px) {
+    .about h2, .about h3 {
+        text-align: center;
+    }
+
+    .profile-img {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Milestone Education Layout */
+.milestone-education {
+    background: #fff5f7;
+    padding: 50px 0; /* Add some padding to the top and bottom */
+}
+
+/* Styling for each milestone step */
+.milestone-step {
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 60px;
+    border-left: 5px solid #ffcce0;
+}
+
+/* Style for milestone badges */
+.milestone-badge {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: #ff69b4;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for milestone content */
+.milestone-content {
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    text-align: center; /* Ensures content is centered */
+}
+
+/* Hover effect for milestone content */
+.milestone-content\:hover {
+    transform: translateY(-6px);
+}
+
+/* Style for heading in milestone content */
+.milestone-content h4 {
+    font-family: 'Lobster', cursive;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+/* Style for paragraph text in milestone content */
+.milestone-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Apply flexbox to center the image inside the container */
+.image-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center;     /* Vertically center the image */
+    margin-top: 20px;        /* Optional: Adjust space above the image */
+}
+
+.milestone-content img {
+    width: auto; /* Ensure the image maintains its aspect ratio */
+    max-width: 100%; /* Prevent the image from exceeding the container width */
+    height: auto; /* Ensure the height is proportional */
+    max-height: 220px; /* Optional: you can adjust the height */
+    object-fit: cover; /* Ensures image fills the space without distortion */
+    border-radius: 8px; /* Optional: rounded corners for the image */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Optional: Apply zoom effect on hover */
+.milestone-content img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    .milestone-step {
+        padding-left: 40px;
+    }
+
+    .milestone-badge {
+        left: -22px;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .image-container {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center the images */
+    }
+
+    .milestone-content img {
+        max-height: 180px; /* Adjusted for smaller screens */
+        object-fit: contain; /* Keeps image proportional */
+    }
+}
+
+/* My Travels Section */
+.travels {
+    background-color: #f7f7f7;
+}
+
+.travels h2 {
+    font-family: 'Lobster', cursive;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Justify all text within travel-card-body */
+.travel-card-body p, .travel-intro {
+    text-align: justify; /* Justify the text */
+}
+
+/* Travel intro paragraph art styling */
+.travel-intro {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    font-style: italic; /* Optional: Adds a nice touch */
+    border-left: 5px solid #3498db; /* Adds a colored border to the left */
+}
+
+/* My Travels Section */
+.travels {
+    background-color: #f7f7f7;
+}
+
+.travels h2 {
+    font-family: 'Lobster', cursive;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Justify all text within travel-card-body */
+.travel-card-body p, .travel-intro {
+    text-align: justify; /* Justify the text */
+}
+
+/* Travel intro paragraph art styling */
+.travel-intro {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    font-style: italic; /* Optional: Adds a nice touch */
+    border-left: 5px solid #3498db; /* Adds a colored border to the left */
+}
+
+/* My Travels Section */
+.travels {
+    background-color: #f7f7f7;
+}
+
+.travels h2 {
+    font-family: 'Lobster', cursive;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Justify all text within travel-card-body */
+.travel-card-body p, .travel-intro {
+    text-align: justify; /* Justify the text */
+}
+
+/* Travel intro paragraph art styling */
+.travel-intro {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    font-style: italic; /* Optional: Adds a nice touch */
+    border-left: 5px solid #3498db; /* Adds a colored border to the left */
+}
+
+/* Travel Card Styling */
+.travel-card {
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.travel-card:hover {
+    transform: translateY(-10px);
+}
+
+.travel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.travel-card img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.travel-card-body {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Apply the "Dancing Script" font to the title of each travel destination (h5) */
+.travel-card-body h5 {
+    font-family: 'Lobster', cursive;  /* Apply the Dancing Script font */
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #fdc9c9;  /* Blue color for the title */
+    font-weight: 600; /* Semi-bold font weight */
+    text-shadow: 
+    1px 1px 2px rgb(234, 0, 175),   /* Horizontal, Vertical, Blur Radius, and Color */
+    -1px -1px 2px rgb(101, 29, 123),
+    1px -1px 2px rgb(37, 138, 201),
+    -1px 1px 2px rgb(53, 52, 52);
+}
+
+/* Style for paragraph text inside each travel card */
+.travel-card-body p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .travel-card {
+        margin-bottom: 20px;
+    }
+
+    .travel-card-body h5 {
+        font-size: 1.25rem;
+    }
+
+    .travel-card-body p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Achievements Section */
+.achievements h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Achievement Cards */
+.achievement-card {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-bottom: 20px; /* Adds space between cards */
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Achievement Icon */
+.achievement-icon {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.achievement-content h5 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.achievement-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    .achievement-card {
+        margin-bottom: 30px;
+    }
+
+    .achievement-content h5 {
+        font-size: 1.25rem;
+    }
+
+    .achievement-content p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f0f4f8;
+    padding: 70px 0;
+    font-family: 'Roboto', sans-serif; /* Default Font for Body */
+}
+
+/* Title */
+.contact h2 {
+    font-family: 'Lobster', cursive; /* Apply Lobster font to h2 */
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact h4 {
+    font-family: 'Lobster', cursive; /* Apply Lobster font to h2 */
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Form Card */
+.contact-form-card,
+.contact-info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif; /* Default Font for Form */
+}
+
+/* Form Elements */
+.contact-form-card .form-group label {
+    font-family: 'Poppins', sans-serif; /* Custom font for labels */
+    font-weight: 600;
+    color: #34495e;
+}
+
+.contact-form-card .form-control {
+    font-family: 'Roboto', sans-serif; /* Custom font for input fields */
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-form-card .form-control:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button */
+.contact-form-card .btn-primary {
+    background-color: #3498db;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif; /* Custom font for button */
+}
+
+.contact-form-card .btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Contact Info Items */
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-info-item i {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.contact-info-item p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Map Container */
+.map-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Media Links */
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.list-inline-item {
+    margin-right: 20px;
+}
+
+.list-inline-item a {
+    font-size: 1.4rem;
+    color: #3498db;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Custom font for social media links */
+}
+
+.list-inline-item a:hover {
+    color: #2980b9;
+}
+
+.list-inline-item i {
+    font-size: 1.8rem;
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact .row {
+        text-align: center;
+    }
+
+    .contact .form-group {
+        margin-bottom: 20px;
+    }
+
+    .map-container iframe {
+        height: 200px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact .row {
+        text-align: center;
+    }
+
+    .contact .form-group {
+        margin-bottom: 20px;
+    }
+
+    .map-container iframe {
+        height: 200px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Bottom Text */
+.footer-bottom p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Motivational Quote Styling */
+.quote {
+    font-style: italic;
+    color: #f39c12;
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Georgia', serif;
+}
+
+/* Footer Text Styling for Copyright */
+.footer-bottom p:first-child {
+    font-size: 14px;
+    color: #ecf0f1;
+}
